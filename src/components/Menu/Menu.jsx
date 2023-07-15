@@ -55,7 +55,7 @@ const Menu = () => {
   return (
       <div className={showMenu ? "menu-card-parent" : "menu-card-parent hide-menu"}>
     <div className="menu-card">
-        <div className="menu-row top-menu-row">
+        <div className="top-menu-row">
             <h2>Settings</h2>
             <button onClick={()=>setShowMenu(!showMenu)} className="close-btn transparent-bg">
                 <img src={closeIcon} alt="" />
@@ -67,7 +67,7 @@ const Menu = () => {
                 Time (Minutes)
             </h4>
          
-            <ul ref={timeOptionsRef} className="options-list b-bottom">
+            <ul ref={timeOptionsRef} className="options-list b-bottom time-options-list">
                 {times.map(time=>(
                <OptionItem key={time.id} time={time} changeItem={handleChangeItem}/>
                ))}

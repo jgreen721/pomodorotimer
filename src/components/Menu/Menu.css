@@ -6,6 +6,7 @@
   transition: 0.3s ease;
   transform: scale(1) translateY(0rem);
   left: 0;
+  background: var(--darkblue);
   /* border: 2px solid red; */
 }
 
@@ -29,7 +30,8 @@
 
 .menu-row,
 .options-list,
-.time-option-select {
+.time-option-select,
+.top-menu-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,12 +45,12 @@
   text-align: start;
 }
 
-.menu-row,
 .options-list {
   padding: 2rem 0;
 }
 
-.menu-row {
+.menu-row,
+.top-menu-row {
   padding: 2rem;
 }
 
@@ -108,4 +110,22 @@
 .apply-btn:hover {
   box-shadow: 2px 3px 15px black;
   transform: scale(1.05) translateY(2.5rem);
+}
+
+@media screen and (max-width: 650px) {
+  .menu-row:not(first-child),
+  .time-options-list {
+    flex-direction: column;
+  }
+
+  .time-option-select-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex: none;
+  }
+
+  .time-option-select {
+    width: 125px;
+  }
 }
