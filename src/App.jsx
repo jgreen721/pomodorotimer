@@ -1,8 +1,7 @@
 import { useState } from 'react'
-import {Header,Selector,Menu,Timer,Gear} from "./components"
+import {Header,Selector,Timer,Gear,Congrats} from "./components"
 import './App.css'
 import { useAppContext } from './context/AppContext'
-import Confetti from 'react-confetti'
 
 
 function App() {
@@ -15,7 +14,7 @@ function App() {
       <Timer/>
       {/* <Menu/> */}
       <Gear/>
-      {time.curr == 0 && <Confetti width={innerWidth} height={innerHeight}/>}
+      {time.curr == 0 && <Congrats width={innerWidth} height={innerHeight}/>}
     </div>
   )
 }

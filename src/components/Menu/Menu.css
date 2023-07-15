@@ -5,6 +5,7 @@
   z-index: 20;
   transition: 0.3s ease;
   transform: scale(1) translateY(0rem);
+  left: 0;
   /* border: 2px solid red; */
 }
 
@@ -12,7 +13,7 @@
   background: var(--white);
   /* padding: 2rem; */
   border-radius: 1.3rem;
-  width: clamp(40%, 400px, 90%);
+  width: clamp(40%, 400px, 95%);
   margin: 0 auto;
   color: var(--secondaryColor);
   position: relative;
