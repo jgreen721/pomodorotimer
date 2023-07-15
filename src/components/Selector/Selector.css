@@ -1,0 +1,43 @@
+.selector-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 3rem 0;
+  /* border: 2px solid orange; */
+}
+
+.timer-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 3rem; */
+  width: fit-content;
+  /* border: 2px solid red; */
+  background: var(--darkblue);
+  border-radius: 100px;
+  position: relative;
+}
+
+.time-option-item {
+  padding: 2rem 2.5rem;
+  cursor: pointer;
+  /* z-index: 5; */
+}
+
+.time-item-content {
+  position: relative;
+  z-index: 5;
+}
+
+.highlight {
+  height: 75%;
+  background: var(--mainBg);
+  position: relative;
+  border-radius: 100px;
+  z-index: 1;
+  width: 33%;
+  position: absolute;
+  transition: 0.5s ease;
+  left: 0%;
+}

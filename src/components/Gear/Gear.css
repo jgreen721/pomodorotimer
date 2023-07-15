@@ -1,0 +1,18 @@
+.settings-row {
+  padding: 2rem 0;
+  position: relative;
+}
+
+.settings-btn {
+  cursor: pointer;
+  transition: 0.5s ease;
+  position: relative;
+  background: transparent;
+  border: none;
+}
+
+.settings-btn:hover {
+  transform: rotate(90deg) scale(1.2);
+  border-radius: 50%;
+  filter: hue-rotate(90deg);
+}

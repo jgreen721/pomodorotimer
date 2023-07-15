@@ -1,0 +1,45 @@
+.app {
+  --mainColor: var(--white);
+  --secondaryColor: var(--darkblue);
+  --thirdColor: var(--navyblue);
+}
+
+.app[data-font="roboto"] {
+  --mainFont: var(--roboto);
+}
+
+.app[data-font="spacemono"] {
+  --mainFont: var(--spacemono);
+}
+
+.app[data-font="kumbhsans"] {
+  --mainFont: var(--kumbhsans);
+}
+
+.app[data-color="red"] {
+  --mainBg: var(--red);
+}
+
+.app[data-color="blue"] {
+  --mainBg: var(--lightblue);
+}
+
+.app[data-color="violet"] {
+  --mainBg: var(--violet);
+}
+
+.app {
+  max-width: 144rem;
+  margin: 0 auto;
+  border: 2px solid black;
+  min-height: 100vh;
+  background: var(--navyblue);
+  color: var(--mainColor);
+  font-family: var(--mainFont);
+  text-align: center;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column; */
+  padding: 3rem 0;
+}
