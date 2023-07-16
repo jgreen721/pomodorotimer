@@ -1,4 +1,4 @@
-import {useContext,createContext, useState} from "react"
+import {useContext,createContext, useState, useEffect} from "react"
 import { cardinalToSeconds,secondsToCardinal } from "../utils/formatTime";
 import { calculatePercent } from '../utils/calculatePercent'
 
@@ -25,11 +25,35 @@ export const GlobalProvider = ({children})=>{
         const [timerInt,setTimerInt] = useState(null)
 
 
+        useEffect(()=>{
+            checkUserPreferences()
+        },[])
+
+        const checkUserPreferences=()=>{
+            if(localStorage['user-color']){
+                setColor(localStorage['user-color'])
+            }
+            if(localStorage['user-font']){
+                setFont(localStorage['user-font'])
+
+            }
+            if(!localStorage['user-color'] && !localStorage['user-font']){
+                console.log("nothing in local_storage");
+            }
+        }
+
+        const updateLocalStorage=(color,font)=>{
+            localStorage.setItem("user-color",color)
+            localStorage.setItem("user-font",font)
+        }
+
+
 
         const updateSettings=(newColor,newFont,newTimesObj)=>{
              console.log(newColor,newFont,newTimesObj)
             setColor(newColor)
             setFont(newFont);
+            updateLocalStorage(newColor,newFont)
              setPomodoro({total:cardinalToSeconds(newTimesObj.pomodoro),curr:cardinalToSeconds(newTimesObj.pomodoro)})
             setShort({total:cardinalToSeconds(newTimesObj['short break']),curr:cardinalToSeconds(newTimesObj['short break'])})
             setLong({total:cardinalToSeconds(newTimesObj['long break']),curr:cardinalToSeconds(newTimesObj['long break'])});
