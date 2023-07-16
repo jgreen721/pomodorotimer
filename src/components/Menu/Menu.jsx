@@ -25,7 +25,7 @@ const Menu = () => {
     ])
     const [colors,setColors]=useState([
         {id:1,name:"red",isHighlighted:true},
-        {id:2,name:"blue",isHighlighted:false},
+        {id:2,name:"teal",isHighlighted:false},
         {id:3,name:"violet",isHighlighted:false},
     ])
 

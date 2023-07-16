@@ -112,6 +112,25 @@
   transform: scale(1.05) translateY(2.5rem);
 }
 
+.check {
+  width: 2rem;
+  height: 0.25rem;
+  background: black;
+  position: relative;
+  transform: rotate(-65deg);
+}
+
+.check::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 0.25rem;
+  background: black;
+  top: -0.3rem;
+  left: -0.3rem;
+  transform: rotate(110deg);
+}
+
 @media screen and (max-width: 650px) {
   .menu-row:not(first-child),
   .time-options-list {

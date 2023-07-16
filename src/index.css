@@ -90,6 +90,15 @@ p {
   cursor: pointer;
   font-weight: 600;
   font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.circle-btn:hover {
+  box-shadow: 2px 3px 5px var(--circle-color);
+  transform: scale(1.1);
 }
 
 .bg-red {
@@ -97,7 +106,7 @@ p {
   /* color: var(--white); */
 }
 
-.bg-blue {
+.bg-teal {
   background: var(--lightblue);
   /* color: var(--white); */
 }
