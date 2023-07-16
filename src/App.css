@@ -20,7 +20,7 @@
   --mainBg: var(--red);
 }
 
-.app[data-color="blue"] {
+.app[data-color="teal"] {
   --mainBg: var(--lightblue);
 }
 
